@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+@helper OrderList(string[] words)
+    {
+    <ol>
+        foreach(string word in words)
+        {
+        <li> @ word</li>
+        }
+    </ol>
+    }
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>InlineHtmlHelper</title>
+</head>
+<body>
+    <div> 
+        @OrderList(new string[] { "tomato","potato","sugar"})
+    </div>
+</body>
+</html>
